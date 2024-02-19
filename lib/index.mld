@@ -1,0 +1,24 @@
+{0 SESAME}
+
+This library implements the Strong Exponential Substitution Abstract Machine without Erasure (SESAME) described in the paper "IMELL Cut Elimination with Linear Overhead" by B. Accattoli and C. Sacerdoti Coen, submitted at FSCD 2024.
+
+It also implements parsing and pretty printing rules, a checker for term properness, a final garbage collection pass, a REPL for the machine and a few interesting examples.
+
+The machine and garbage collection are implemented in the {!module-Sesame.Reduction} sub-module. They work on representation of terms and other data structures via graphs, defined in the {!module-Sesame.TermGraphs} sub-module. Together, these two sub-modules implement what described in the paper. The remaining modules are for the additional
+functionalities to obtain a usable REPL.
+
+{1 Library sesame}
+The entry point of this library is the module:
+{!module-Sesame} that is made of the following sub-modules:
+
+- Modules that implement the SESAME machine:
+{!modules: Sesame.TermGraphs Sesame.Reduction}
+
+- Module to check for properness of terms. The SESAME machine assume all terms to be proper.
+{!modules: Sesame.Proper}
+
+- Modules for parsing and pretty-printing terms:
+{!modules: Sesame.Parser Sesame.Pp}
+
+- Modules that provide the REPL and some pre-made tests:
+{!modules: Sesame.REPL Sesame.Tests}
