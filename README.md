@@ -25,6 +25,12 @@ steps without even a single multiplicative steps. They show that, contrarily to
 what happens for lambda-calculi, the number of beta-steps alone is not a cost
 model.
 
+## Library API
+
+Searchable documentation for every datatype and function can be found at
+<https://sacerdot.github.io/sesame>.
+
+
 ## Compiling and running sesame
 
 To compile sesame, one needs a working installation of OCaml and Dune.
@@ -33,7 +39,8 @@ The simplest way is to use the OPAM package manager for OCaml:
 - Install OPAM <https://opam.ocaml.org/doc/Install.html>
 - Install dune, odoc and sherlodoc via opam:
   `opam update && opam install dune odoc sherlodoc`
-- Compile sesame's documentation via dune and open it in a browser:
+- [optional] Compile sesame's documentation via dune and open it in a browser:
   `opam build @doc && open _build/default/_doc/_html/sesame/index.html`
-- Run sesame's REPL:
-  `opam exec sesame`
+  The same documentation can be found at <https://sacerdot.github.io/sesame>
+- Run sesame's REPL: `opam exec sesame`
+  The input grammar is printed by the REPL itself.
